@@ -1,6 +1,7 @@
 import React from 'react'
 import {Icon} from "@mui/material";
 import styled from "styled-components";
+import {AutorName} from "../../Profile/AutorName.jsx";
 
 const AutorStyle = styled.div`
   display: flex;
@@ -19,11 +20,11 @@ margin-left: auto;
 const AutorInfo = ({Icon}) => {
     return (
         <AutorStyle>
-            <h2>Elon Musk</h2>
+            <AutorName text={"Вадим Татаринцев"}/>
             <span>@elonmusk</span>
-            <AutorButton role={"button"}><Icon/></AutorButton>
+            <AutorButton><Icon/></AutorButton>
         </AutorStyle>
     );
 
 }
-export default AutorInfo;
+export {AutorInfo};

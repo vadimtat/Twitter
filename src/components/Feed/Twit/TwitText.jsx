@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TweetText = ({text, url, alt}) => {
+const TwitText = ({text, url, alt}) => {
     return (
         <div>
             <p>{text}</p>
@@ -8,4 +8,4 @@ const TweetText = ({text, url, alt}) => {
         </div>
     );
 }
-export default TweetText;
+export default TwitText;

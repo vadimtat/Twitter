@@ -22,4 +22,4 @@ const Widjets = () => {
     );
 
 }
-export default Widjets;
+export {Widjets};

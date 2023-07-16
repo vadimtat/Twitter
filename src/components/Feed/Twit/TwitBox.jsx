@@ -6,7 +6,7 @@ const FormClass = styled.form`
   min-height: 30px;
   border-bottom: 1px solid #E1E8ED;
 `
-const TweetBox = () => {
+const TwitBox = () => {
     return (
         <FormClass>
             <div>
@@ -21,4 +21,4 @@ const TweetBox = () => {
 
 
 }
-export default TweetBox;
+export default TwitBox;

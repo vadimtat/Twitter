@@ -1,6 +1,6 @@
 import React from "react";
-import Nav from "./Nav/Nav.jsx";
-import Button from "../Button/Button.jsx";
+import {Nav} from "./Nav/Nav.jsx";
+import Button from "../../Button/Button.jsx";
 import styled from "styled-components";
 import TwitterIcon from '@mui/icons-material/Twitter';
 import HomeIcon from '@mui/icons-material/Home';
@@ -16,25 +16,26 @@ import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlin
 
 const SideBlock = styled.div`
   border-right: 1px solid #E1E8ED;
-  min-width: 240px;
+  max-width: 260px;
 `
 const Sidebar = () => {
     return (
-        <SideBlock>
+        <div>
             <TwitterIcon/>
-            <Nav Icon={HomeIcon} text='Home'/>
-            <Nav Icon={SearchIcon} text='Explore'/>
-            <Nav Icon={NotificationsNoneIcon} text='Notification'/>
-            <Nav Icon={MailOutlineIcon} text='Messages'/>
-            <Nav Icon={ListAltIcon} text='Lists'/>
-            <Nav Icon={BookmarkBorderOutlinedIcon} text='Bookmarks'/>
-            <Nav Icon={VerifiedOutlinedIcon} text='Verified'/>
-            <Nav Icon={PermIdentityIcon} text='Profile'/>
-            <Nav Icon={MoreHorizIcon} text='More'/>
-            <Button/>
-        </SideBlock>
-
+            <SideBlock>
+                <Nav Icon={HomeIcon} text='Home' url='/feed'/>
+                <Nav Icon={SearchIcon} text='Explore'/>
+                <Nav Icon={NotificationsNoneIcon} text='Notification'/>
+                <Nav Icon={MailOutlineIcon} text='Messages' url='/messages'/>
+                <Nav Icon={ListAltIcon} text='Lists'/>
+                <Nav Icon={BookmarkBorderOutlinedIcon} text='Bookmarks'/>
+                <Nav Icon={VerifiedOutlinedIcon} text='Verified'/>
+                <Nav Icon={PermIdentityIcon} text='Profile' url='/profile'/>
+                <Nav Icon={MoreHorizIcon} text='More'/>
+                <Button/>
+            </SideBlock>
+        </div>
     );
 
 }
-export default Sidebar;
+export {Sidebar};

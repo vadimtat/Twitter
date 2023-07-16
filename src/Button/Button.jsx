@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const ButtonSlide = styled.button`
-  width: 100%;
+  width: 212px;
   border-radius: 30px;
   background-color: #1DA1F2;
   color: #ffffff;

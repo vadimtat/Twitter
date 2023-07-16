@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from "styled-components";
-import TweetBox from "../Tweet/TweetBox.jsx";
-import Category from "./Category.jsx";
-import Tweet from "../Tweet/Tweet.jsx";
+import TwitBox from "./Twit/TwitBox.jsx";
+import { Category } from "./Category.jsx";
+import Twit from "./Twit/Twit.jsx";
+import {FeedTitle} from "./FeedTitile.jsx";
 
 
 const FeedContent =
@@ -30,14 +31,14 @@ const Feed = () => {
     return (
         <FeedContent>
             <FeedHeader>
-                <h2>Home</h2>
+                <FeedTitle/>
                 <Category/>
             </FeedHeader>
-            <TweetBox/>
-            <Tweet/>
+            <TwitBox/>
+            <Twit/>
         </FeedContent>
     );
 
 }
 
-export default Feed;
+export {Feed};

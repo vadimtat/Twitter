@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import {NavLink} from "react-router-dom";
 
 const Navlist = styled.nav`
-  display: flex;
+  display: inline-flex;
   align-items: center;
   cursor: pointer;
+  padding: 12px;
 
   &:hover {
     background-color: rgba(15, 20, 25, 0.1);
@@ -12,20 +14,20 @@ const Navlist = styled.nav`
 
   }
 
-  & h2 {
+  & a {
     text-decoration: none;
     font-weight: 800;
     font-size: 20px;
     margin: 0 20px 0 16px;
   }
 `
-const Nav = ({text, Icon}) => {
+const Nav = ({text, Icon, url}) => {
     return (
         <Navlist>
             <Icon/>
-            <h2>{text}</h2>
+            <NavLink to={url}>{text}</NavLink>
         </Navlist>
     );
 
 }
-export default Nav;
+export {Nav};

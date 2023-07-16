@@ -26,4 +26,4 @@ const Category = () => {
         </CategoryBlock>
     );
 }
-export default Category;
+export {Category};
