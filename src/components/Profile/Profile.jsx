@@ -5,14 +5,14 @@ import {ProfileHeader} from "./ProfileHeader.jsx";
 import {ProfileBanner} from "./ProfileBanner.jsx";
 import {ProfileInfo} from "./ProfileInfo.jsx";
 
-const Profile = () => {
+const Profile = (props) => {
     return(
         <div>
             <ProfileHeader/>
             <ProfileBanner/>
             <ProfileInfo/>
             <ProfileTabs/>
-            <Twit/>
+            <Twit tweets={props.tweets}/>
         </div>
 
     );

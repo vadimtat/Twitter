@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
 import TwitBox from "./Twit/TwitBox.jsx";
-import { Category } from "./Category.jsx";
+import {Category} from "./Category.jsx";
 import Twit from "./Twit/Twit.jsx";
 import {FeedTitle} from "./FeedTitile.jsx";
 
@@ -27,7 +27,7 @@ const FeedHeader = styled.div`
   border-bottom: 1px solid #E1E8ED;
 
 `
-const Feed = () => {
+const Feed = (props) => {
     return (
         <FeedContent>
             <FeedHeader>
@@ -35,7 +35,7 @@ const Feed = () => {
                 <Category/>
             </FeedHeader>
             <TwitBox/>
-            <Twit/>
+            <Twit tweets={props.tweets}/>
         </FeedContent>
     );
 
